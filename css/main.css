@@ -1,0 +1,351 @@
+.body
+{
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 0 ;
+}
+
+/* Десктопная версия*/
+
+
+@media (min-width: 481px)
+{
+    .section
+    {
+        display: flex;
+
+        width: 100%;
+        height: 900px;
+    }
+
+    .sidebar
+    {
+        position: absolute;
+
+        width: 461px;
+        height: 900px;
+
+        background-color: #000;
+    }
+
+    .logo
+    {
+        font-size: 30px;
+        font-weight: 500;
+
+        position: absolute;
+        top: 36px;
+        left: 52px;
+
+        letter-spacing: .07em;
+
+        color: #fff;
+    }
+
+
+    .menu__icon
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 92px;
+        height: 92px;
+
+        cursor: pointer;
+
+        background-color: #f2f2f2;
+    }
+
+    .menu__icon span
+    {
+        position: absolute;
+        left: 28.25px;
+
+        display: block;
+
+        width: 34.7px;
+        height: 3.18px;
+
+        background: #333;
+    }
+
+    .menu__icon span:nth-child(1)
+    {
+        top: 39.54px;
+    }
+
+    .menu__icon span:nth-child(2)
+    {
+        top: 48.98px;
+    }
+
+    .language
+    {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+
+        position: absolute;
+        top: 42px;
+        left: 84%;
+
+        display: flex;
+
+        text-transform: uppercase;
+
+        color: #fff;
+    }
+
+    .language__item
+    {
+        margin: 0 7px 0 0;
+    }
+
+
+
+    .main
+    {
+        position: absolute;
+        top: 263px;
+        left: 789px;
+
+        display: inline-block;
+
+        width: 467px;
+    }
+
+    .title
+    {
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 82px;
+
+        margin: 0 0 18px 0;
+        padding-top: 8px;
+    }
+
+    .text
+    {
+        font-size: 15px;
+        line-height: 21px;
+
+        margin: 0;
+    }
+
+    .photo
+    {
+        position: absolute;
+        top: 169px;
+        left: 186px;
+
+        display: block;
+
+        width: 549px;
+        height: 562px;
+    }
+
+    .socials
+    {
+        position: absolute;
+        top: 816px;
+        left: 52px;
+
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    .socials__item
+    {
+        margin: 0 12.03px 0 0;
+
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .more
+    {
+        position: absolute;
+        top: 616px;
+        left: 786px;
+
+        display: flex;
+    }
+
+    .button
+    {
+        font-family: 'Montserrat';
+
+        width: 203px;
+        height: 44px;
+        margin: 0 54px 0 0;
+
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        border: 1.5px solid #000;
+        background-color: #fff;
+    }
+
+    .link
+    {
+        font-size: 13px;
+        font-weight: 500;
+
+        display: flex;
+
+        margin: 0 20px 0 0;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: #000;
+
+        align-items: center;
+    }
+
+    .scroll
+    {
+        text-decoration: none;
+    }
+
+    .scroll-border
+    {
+        position: absolute;
+        top: 815px;
+        left: 707px;
+
+        box-sizing: border-box;
+        width: 27px;
+        height: 46px;
+
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
+    .scroll-line
+    {
+        position: absolute;
+        top: 10.5px;
+        left: 10.27px;
+
+        width: 1.45px;
+        height: 8.21px;
+
+        border-color: black;
+        border-radius: 19px;
+        background: black;
+    }
+
+    .scroll-mobile
+    {
+        display: none;
+    }
+}
+
+/*Версия для мобильных телефонов*/
+
+@media (max-width: 480px)
+{
+    .main-background
+    {
+        height: 100vh;
+        width: 100vw;
+
+        background: url('../img/pete-bellis-432867-unsplash-mobile.png') no-repeat;
+        background-position: center 15px;
+        background-size: cover;
+    }
+
+    .sidebar
+    {
+        height: 69px;
+
+        background-color: #fff;
+    }
+
+    .logo
+    {
+        font-size: 30px;
+        font-weight: 500;
+
+        position: absolute;
+        top: 15px;
+        left: 26px;
+
+        text-align: center;
+        letter-spacing: .07em;
+
+        color: #000;
+    }
+
+    .language,
+    .socials,
+    .photo,
+    .more,
+    .text,
+    .scroll
+    {
+        display: none;
+    }
+
+
+    .menu__icon
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 70px;
+        height: 69px;
+
+        cursor: pointer;
+
+        background-color: #f2f2f2;
+    }
+
+    .menu__icon span
+    {
+        position: absolute;
+        left: 21.49px;
+
+        display: block;
+
+        width: 26.4px;
+        height: 2.61px;
+
+        background: #333;
+    }
+
+    .menu__icon span:nth-child(1)
+    {
+        top: 29.66px;
+    }
+
+    .menu__icon span:nth-child(2)
+    {
+        top: 36.73px;
+    }
+
+    .title
+    {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 51px;
+
+        position: absolute;
+        bottom: 7%;
+        left: 26px;
+
+        color: #000;
+    }
+
+    .scroll-mobile
+    {
+        position: absolute;
+        bottom: 4%;
+        left: calc(50% - 14px);
+    }
+}
