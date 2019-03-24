@@ -18,7 +18,7 @@
     min-height: 300px;
 }
 
-.pink-bg
+.bg-pink
 {
     width: 100%;
     height: 100vh;
@@ -27,7 +27,7 @@
     background-color: #fae8e4;
 }
 
-.purple-bg
+.bg-purple
 {
     height: 100vh;
     min-height: 300px;
@@ -196,6 +196,12 @@
     align-items: center;
 }
 
+.main
+{
+    width: 100%;
+    max-width: 500px;
+}
+
 .title
 {
     font-size: 80px;
@@ -221,7 +227,7 @@
 }
 
 
-.photo-img
+.main-photo
 {
     width: 40%;
     height: auto;
@@ -233,6 +239,8 @@
     position: relative;
 
     display: flex;
+
+    justify-content: space-between;
 }
 
 .button
@@ -263,6 +271,8 @@
 {
     display: flex;
 
+    width: 100%;
+
     text-decoration: none;
 }
 
@@ -283,21 +293,76 @@
     align-items: center;
 }
 
+
 .link-arrow
 {
-    display: inline-block;
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    min-width: 40px;
+    height: 100%;
 }
 
-.photo-container
+.arrow
+{
+    position: absolute;
+    top: calc(50% - 1px);
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: black;
+}
+
+.arrow:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 9px;
+    height: 2px;
+
+    content: '';
+    transform: rotate(-45deg);
+    transform-origin: 100% 0;
+
+    background-color: black;
+}
+
+.arrow:after
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 7.5px;
+    height: 2px;
+
+    content: '';
+    transform: rotate(45deg);
+    transform-origin: 100% 0;
+
+    background-color: black;
+}
+
+.bg-pink__content-left
 {
     position: relative;
-    left: 9.5%;;
+    left: 9.5%;
 
     display: flex;
 
     width: 47%;
     height: 100%;
-
     /*margin: 0 66px 0 0;*/
 
     align-items: center;
@@ -338,14 +403,23 @@
     box-shadow: 0 0 72px -12px #000;
 
     justify-content: center;
+    /*вот это кажется надо исправить*/
     align-items: center;
+    /*вот это кажется надо исправить*/
 }
 
 .box-container
 {
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+
     width: 368px;
+    height: 85%;
+
+    align-content: stretch;
+    align-items: stretch;
 }
 
 .box__title
@@ -373,9 +447,23 @@
 
 .box__text
 {
-    margin: 0 0 6.83% 0;
+    width: 100%;
+    margin: 0 0 15% 0;
 
     opacity: .5;
+}
+
+.box__features
+{
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .price
@@ -383,16 +471,6 @@
     font-size: 40px;
     font-weight: bold;
     line-height: 41px;
-}
-
-.circleprice
-{
-    display: flex;
-
-    margin: 0 0 59px 0;
-
-    justify-content: space-between;
-    align-items: center;
 }
 
 .circle
@@ -442,14 +520,6 @@
     background-color: #90bd8f;
 }
 
-.qtybutton
-{
-    display: flex;
-
-    justify-content: space-between;
-}
-
-
 .qty
 {
     display: flex;
@@ -464,24 +534,24 @@
     align-items: center;
 }
 
-.content-right
+.bg-pink__content-right
 {
     position: relative;
     z-index: 6;
-    left: 13%;;
+    left: 13%;
 
     display: flex;
     flex-direction: column;
 
     width: 33.88%;
-
     /*align-items: center;*/
 
     justify-content: center;
+    ;
 }
 
 
-.content-right2
+.bg-purple__content-right
 {
     position: relative;
     z-index: 6;
@@ -492,13 +562,12 @@
 
     width: 33%;
     height: 100%;
-
     /*align-items: center;*/
 
     justify-content: center;
 }
 
-.content2
+.bg-pink__content
 {
     position: absolute;
 
@@ -532,7 +601,7 @@
     height: auto;
 }
 
-.content3
+.bg-purple__content
 {
     display: flex;
 
@@ -542,12 +611,17 @@
     align-items: center;
 }
 
-.content-right2 > .more
+.bg-purple__content-right  .more
 {
     justify-content: flex-end;
 }
 
-.content-right2 > .box
+.bg-purple__content-right  .link
+{
+    width: 70%;
+}
+
+.bg-purple__content-right .box
 {
     height: 39%;
 
@@ -588,6 +662,9 @@
     width: 82px;
     height: auto;
 }
+
+
+
 
 /*Десктопная версия*/
 
@@ -816,7 +893,7 @@
 
 @media (max-width: 480px)
 {
-    .main-bg
+    .bg-main
     {
         width: 100vw;
         height: 100vh;
@@ -856,10 +933,11 @@
     .socials,
     .text,
     .more,
-    .photo-img,
+    .main-photo,
     .scroll,
     .photo1,
-    .footer
+    .footer,
+    .qty
     {
         display: none;
     }
@@ -940,13 +1018,188 @@
         display: block;
     }
 
-    .content2
+    .bg-pink__content
     {
         left: 0;
 
         flex-direction: column;
 
         align-items: center;
+    }
+
+    .bg-pink__content-left
+    {
+        left: 0;
+
+        width: 80%;
+        height: 55%;
+    }
+
+    .bg-pink__content-right
+    {
+        left: 0;
+
+        width: 85%;
+        height: 100%;
+    }
+
+    .button
+    {
+        font-size: 13px;
+
+        width: 260px;
+        height: 37px;
+        margin: auto;
+    }
+
+    .box
+    {
+        min-height: 281px;
+
+        box-shadow: none;
+    }
+
+    .box-container
+    {
+        width: 81.25%;
+        height: 85%;
+    }
+
+    .box__title
+    {
+        font-size: 20px;
+        line-height: 20px;
+
+        margin: 0 0 .4% 0;
+    }
+
+    .box__subtitle
+    {
+        font-size: 10px;
+        line-height: 10px;
+
+        margin: 0 0 6% 0;
+    }
+
+    .box__text
+    {
+        font-size: 9px;
+        line-height: 13px;
+
+        margin: 0 0 7% 0;
+    }
+
+    .circle
+    {
+        width: 119.5px;
+    }
+
+    .circle-purple,
+    .circle-blue,
+    .circle-green
+    {
+        width: 23px;
+        height: 23px;
+    }
+
+    .circle-pink
+    {
+        width: 29px;
+        height: 29px;
+    }
+
+
+
+    .price
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+
+
+    .bg-purple__content
+    {
+        left: 0;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .rectangle
+    {
+        width: 11%;
+    }
+
+    .photo3
+    {
+        position: relative;
+        top: 34px;
+        left: 0;
+
+        width: 93.6%;
+        height: auto;
+    }
+
+    .bg-purple__content-right
+    {
+        top: 0;
+        left: 0;
+
+        width: 81.33%;
+
+        justify-content: flex-start;
+    }
+
+    .bg-purple__content-right  .box
+    {
+        height: 32.66%;
+        min-height: 195px;
+    }
+
+    .bg-purple__content-right  .more
+    {
+        display: flex;
+
+        width: 100%;
+        height: 80px;
+
+        justify-content: flex-end;
+    }
+
+    .bg-purple__content-right  .link
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 133.5px;
+
+        height: 100%;
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+    .link-name
+    {
+        font-size: 15px;
+
+        width: 100%;
+        height: 50%;
+        margin: 0 0 10% 0;
+
+        white-space: normal;
+    }
+
+    .link-arrow
+    {
+        width: 100%;
+        height: 10%;
     }
 }
 
