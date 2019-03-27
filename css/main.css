@@ -1341,8 +1341,6 @@
 
         flex-direction: column;
 
-        justify-content: center;
-
     }
 
     .rectangle
@@ -1369,6 +1367,7 @@
 
         width: 81.33%;
         max-width: 305px;
+        height: 50%;
 
         justify-content: flex-start;
     }
