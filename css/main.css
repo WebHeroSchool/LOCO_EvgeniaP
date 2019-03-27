@@ -15,14 +15,14 @@
 
     width: 100%;
     height: 100vh;
-    min-height: 300px;
+    min-height: 700px;
 }
 
 .bg-pink
 {
     width: 100%;
     height: 100vh;
-    min-height: 300px;
+    min-height: 700px;
 
     background-color: #fae8e4;
 }
@@ -30,7 +30,7 @@
 .bg-purple
 {
     height: 100vh;
-    min-height: 300px;
+    min-height: 700px;
 
     background-color: #ebe3d8;
 }
@@ -45,7 +45,7 @@
 
     width: 32%;
     height: 100vh;
-    min-height: 300px;
+    min-height: 700px;
 
     background-color: #000;
 }
@@ -664,6 +664,15 @@
 
 @media (max-width: 1200px)
 {
+    .section,
+    .bg-main,
+    .bg-pink,
+    .bg-purple,
+    .sidebar
+    {
+        min-height: 550px;
+    }
+
     .language
     {
         left: 78%;
@@ -758,6 +767,15 @@
 
 @media (max-width: 980px)
 {
+    .section,
+    .bg-main,
+    .bg-pink,
+    .bg-purple,
+    .sidebar
+    {
+        min-height: 420px;
+    }
+
    .box-white 
     {
         margin: 0 0 25px 0;
@@ -798,7 +816,7 @@
         margin: 0 0 36px 0;
     }
 
-        .box__features 
+    .box__features 
     {
         margin: 0 0 26px 0;
     }
@@ -857,6 +875,16 @@
 
 @media (max-width: 768px)
 {
+    .section,
+    .bg-main,
+    .bg-pink,
+    .bg-purple,
+    .sidebar
+    {
+        min-height: 320px;
+    }
+
+
     .bg-pink__content-right
     {
         left: 10%;
