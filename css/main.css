@@ -870,6 +870,16 @@
         height: 29px;
     }
 
+    .bg-pink__content-right
+    {
+       max-width: 230px;
+    }
+
+    .bg-purple__content-right
+    {
+        max-width: 230px;
+    }
+
 }
 
 
