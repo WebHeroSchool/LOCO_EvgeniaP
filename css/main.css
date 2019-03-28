@@ -1153,6 +1153,15 @@
 
 @media (max-width: 480px)
 {
+    .section,
+    .sidebar,
+    .main-section,
+    .second-section,
+    .third-section
+    {
+        min-height: 550px;
+    }
+
     .main-section
     {
         width: 100vw;
@@ -1393,7 +1402,7 @@
         top:10%;
         left: 0;
 
-        width: 93.6%;
+        width: 75%;
         height: auto;
     }
 
@@ -1405,7 +1414,7 @@
 
         width: 81.33%;
         max-width: 305px;
-        height: 50%;
+        height: 45%;
 
         justify-content: flex-start;
     }
