@@ -1156,6 +1156,7 @@
     .section,
     .sidebar,
     .main-section,
+    .main-section__content,
     .second-section,
     .third-section
     {
@@ -1270,7 +1271,7 @@
         line-height: 51px;
 
         position: absolute;
-        bottom: 7%;
+        bottom: 8%;
         left: 26px;
 
         display: block;
