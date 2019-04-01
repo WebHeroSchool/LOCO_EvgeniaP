@@ -880,8 +880,9 @@
 
     .popular-set__content-right
     {
-        max-width: 230px;
-    }
+        max-width: 280px;
+        min-width: 250px;
+     }
 
 }
 
@@ -1475,7 +1476,7 @@
     .popular-product,
     .popular-set
     {
-        min-width: 280px;
+        min-width: 320px;
     }
 
     .title
